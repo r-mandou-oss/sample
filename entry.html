@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お申し込み | 未来ITラボ</title>
+  <link rel="stylesheet" href="style.css?v=5" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">未来ITラボ</div>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="details.html">詳細</a></li>
+        <li><a href="entry.html">申込</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="entry-box">
+      <h1 class="section-title">お申し込み</h1>
+      <p>参加を希望する方は、下のフォームに入力して送信してください。</p>
+
+      <form id="entry-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">氏名</label>
+            <input id="name" type="text" placeholder="例：山田 花子" />
+          </div>
+
+          <div class="field">
+            <label for="school">学校名</label>
+            <input id="school" type="text" placeholder="例：○○高校" />
+          </div>
+
+          <div class="field">
+            <label for="grade">学年</label>
+            <input id="grade" type="email" placeholder="sample@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="mail">メールアドレス</label>
+            <select id="mail">
+              <option>高校1年生</option>
+              <option>高校2年生</option>
+              <option>高校3年生</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">質問・不安なこと</label>
+            <textarea id="message" placeholder="自由にご記入ください"></textarea>
+          </div>
+        </div>
+
+        <button class="submit-btn" type="submit">申し込む</button>
+        <p id="result-message"></p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">関連ページ</h2>
+
+      <div class="button-group">
+        <a class="btn" href="details.html">トップページ</a>
+        <a class="btn" href="index.html">開催詳細</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 未来ITラボ</p>
+  </footer>
+
+  <script>
+    document.getElementById("entry-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("result-message").textContent = "申し込みがキャンセルされました。";
+    });
+  </script>
+</body>
+</html>
