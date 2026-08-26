@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="高校生向けITおしごと体験。ITやプログラミングが初めてでも楽しめるテスター体験です。">
+  <title>申し込み | 未来ITラボ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">未来ITラボ</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="details.html">体験内容</a></li>
+        <li><a href="entry.html">申し込み</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="entry-box">
+  <h1 class="section-title">参加してみる！</h1>
+  <p class="section-lead">IT初心者、大歓迎。まずは気軽に申し込んでみよう！</p>
+  <form id="entry-form">
+    <div class="form-grid">
+      <div class="field"><label for="name">氏名</label><input id="name" name="name" type="text" placeholder="例：山田 花子" autocomplete="name" required></div>
+      <div class="field"><label for="school">学校名</label><input id="school" name="school" type="text" placeholder="例：○○高校" required></div>
+      <div class="field"><label for="grade">学年</label><select id="grade" name="grade" required><option value="">選択してください</option><option>高校1年生</option><option>中学2年生</option><option>高校3年生</option></select></div>
+      <div class="field full"><label for="message">質問・不安なこと</label><textarea id="message" name="message" placeholder="「プログラミング未経験でも大丈夫？」など、気になることがあればどうぞ！"></textarea></div>
+    </div>
+    <div class="submit-wrap"><button class="submit-btn" type="submit">体験会に申し込む →</button></div>
+    <p id="result-message" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section class="panel">
+  <h2 class="section-title">まだ迷っているなら</h2>
+  <p class="section-lead">体験内容をもう一度チェックしてから決めてもOK！</p>
+  <div class="button-group">
+    <a class="btn secondary" href="index.html">ホームへ</a>
+    <a class="btn secondary" href="details.html">体験内容を見る</a>
+  </div>
+</section>
+
+<script>
+document.getElementById("entry-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("result-message").textContent =
+    "申し込みをキャンセルしました。";
+});
+</script>
+</main>
+<footer>
+  <p>© 2026 未来ITラボ</p>
+  <p>高校生向け ITおしごと体験</p>
+</footer>
+</body>
+</html>
